@@ -1,0 +1,35 @@
+alias rtlatex="latexmk -pvc -pdf"
+alias make="make -j"
+alias sr="source devel/setup.zsh"
+alias v=vi
+alias pullr="find . -name \".git\" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull"
+
+# ROS
+export ROS_MASTER_URI=http://localhost:11311
+
+# Custom functions
+function RMM {
+    unset ROS_HOSTNAME
+    export ROS_MASTER_URI=http://"$@":11311
+    export ROS_IP=$@
+}
+
+# save path on cd
+function cd {
+    builtin cd "$@"
+    pwd > /tmp/last_dir
+}
+
+# restore last saved path
+if [ -f /tmp/last_dir ]
+    then cd "$(cat /tmp/last_dir)"
+fi
+
+# GDB with Black Magic Probe script
+alias gdb-bmp='sh -c "urxvt &" && sleep 0.5 && arm-none-eabi-gdb -ex "target extended-remote /dev/ttyBmpGDB" -ex "dashboard -output $(cat /tmp/termtty)" -ex "monitor swdp_scan" -ex "attach 1"'
+
+# GDB with dashboard
+alias gdb-dashboard='sh -c "urxvt &" && sleep 0.5 && gdb -ex "dashboard -output $(cat /tmp/termtty)"'
+
+# Save the current terminal
+echo $(tty) > /tmp/termtty
