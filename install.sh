@@ -38,6 +38,10 @@ packages="\
     pavucontrol \
     xbacklight \
     scrot \
+    gnome-themes-standard \
+    adwaita-icon-theme-full \
+    lxappearance \
+    thunar \
     "
 i3wmpkgs="\
     i3 \
