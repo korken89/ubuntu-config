@@ -141,6 +141,7 @@ ln -sf "$(pwd)/i3blocks.conf" ~/.i3/i3blocks.conf
 ln -sf "$(pwd)/rc_additions" ~/.rc_additions
 ln -sf "$(pwd)/aliases" ~/.aliases
 ln -sf "$(pwd)/zshrc" ~/.zshrc
+ln -sf "$(pwd)/agnoster_btf.zsh-theme" ~/.oh-my-zsh/themes
 ln -sf "$(pwd)/Xresources" ~/.Xresources
 ln -sf "$(pwd)/latexmkrc" ~/.latexmkrc
 echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
