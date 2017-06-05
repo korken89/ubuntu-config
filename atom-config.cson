@@ -1,0 +1,47 @@
+"*":
+  "clang-format":
+    formatCOnSave: false
+    formatCPlusPlusOnSave: false
+  core:
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "linter-clang"
+      "linter"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 15
+    lineHeight: 1.4
+    scrollPastEnd: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "03856c7f-c01d-9abf-d410-ff55d8e8f9c9"
+  "git-plus":
+    remoteInteractions:
+      pullRebase: true
+  "highlight-line":
+    hideHighlightOnSelect: true
+    underline: "dashed"
+  linter: {}
+  "linter-clang":
+    clangDefaultCFlags: "-Wall -Wextra "
+    clangDefaultCppFlags: "-Wall -Wextra -std=c++14"
+  tabs:
+    addNewTabsAtEnd: true
+  "vim-mode-plus":
+    automaticallyEscapeInsertModeOnActivePaneItemChange: true
+    clearHighlightSearchOnResetNormalMode: true
+    clearMultipleCursorsOnEscapeInsertMode: true
+    highlightSearch: true
+    ignoreCaseForSearch: true
+    incrementalSearch: true
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false
+  "you-complete-me":
+    pythonExecutable: "python3"
+    ycmdPath: "/home/emifre/.config/nvim/plugged/YouCompleteMe/third_party/ycmd"

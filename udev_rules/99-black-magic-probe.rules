@@ -1,0 +1,6 @@
+# Black Magic Probe
+# there are two connections, one for GDB and one for uart debugging
+ACTION=="add", ATTR{idVendor}=="1d50", ATTRS{idProduct}=="6017", MODE:="666"
+ACTION=="add", ATTR{idVendor}=="1d50", ATTRS{idProduct}=="6018", MODE:="666"
+SUBSYSTEM=="tty", ATTRS{interface}=="Black Magic GDB Server", SYMLINK+="ttyBmpGDB"
+SUBSYSTEM=="tty", ATTRS{interface}=="Black Magic UART Port", SYMLINK+="ttyBmpUART"
