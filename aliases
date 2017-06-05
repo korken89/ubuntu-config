@@ -1,4 +1,4 @@
-alias install="sudo apt-get install"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
-alias search="apt-cache search"
+alias install="sudo apt install"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+alias search="apt search"
