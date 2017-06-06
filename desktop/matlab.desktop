@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Matlab
+Comment=Matlab
+Exec=MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk-amd64/jre LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libstdc++.so.6" matlab -desktop
+Categories=Office
+Terminal=false`
