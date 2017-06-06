@@ -104,6 +104,14 @@ sudo apt update
 sudo apt install --yes youtube-viewer
 
 echo ""
+echo Installing Spotify
+sleep 1
+sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D2C19886
+sudo apt update
+sudo apt install spotify-client
+
+echo ""
 echo Installing neovim
 sleep 1
 sudo add-apt-repository ppa:neovim-ppa/stable
