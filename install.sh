@@ -153,6 +153,7 @@ echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
 ln -sf "$(pwd)/ymusic.sh" ~/.ymusic.sh
 ln -sf "$(pwd)/atom-config.cson" ~/.atom/config.cson
 sudo ln -sf "$(pwd)/lock.sh" /usr/bin/pixellock
+sudo ln -sf "$(pwd)/i3exit" /usr/bin/i3exit
 ln -sf "$(pwd)/gdbinit" ~/.gdbinit
 sudo ln -sf "$(pwd)/20-intel.conf" /usr/share/X11/xorg.conf.d
 
