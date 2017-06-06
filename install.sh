@@ -184,6 +184,7 @@ echo Fixing some configs...
 sleep 1
 
 mkdir -p ~/.i3
+mkdir -p ~/.config/dunst
 ln -sf "$(pwd)/i3_config" ~/.i3/config
 ln -sf "$(pwd)/i3-battery.py" ~/.i3/i3-battery.py
 ln -sf "$(pwd)/i3blocks.conf" ~/.i3/i3blocks.conf
@@ -192,6 +193,7 @@ ln -sf "$(pwd)/aliases" ~/.aliases
 ln -sf "$(pwd)/zshrc" ~/.zshrc
 ln -sf "$(pwd)/agnoster_btf.zsh-theme" ~/.oh-my-zsh/themes
 ln -sf "$(pwd)/Xresources" ~/.Xresources
+ln -sf "$(pwd)/dunstrc" ~/.config/dunst/dunstrc
 ln -sf "$(pwd)/latexmkrc" ~/.latexmkrc
 ln -sf "$(pwd)/ymusic.sh" ~/.ymusic.sh
 ln -sf "$(pwd)/atom-config.cson" ~/.atom/config.cson
