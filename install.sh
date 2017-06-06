@@ -112,6 +112,13 @@ sudo apt update
 sudo apt install spotify-client
 
 echo ""
+echo Installing Telegram
+sleep 1
+sudo add-apt-repository ppa:atareao/telegram
+sudo apt update
+sudo apt install telegram
+
+echo ""
 echo Installing neovim
 sleep 1
 sudo add-apt-repository ppa:neovim-ppa/stable
