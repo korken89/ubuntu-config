@@ -46,6 +46,7 @@ packages="\
 i3wmpkgs="\
     i3 \
     i3blocks \
+    j4-dmenu-desktop
     "
 
 atompkgs="\
