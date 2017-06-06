@@ -1,4 +1,5 @@
 alias install="sudo apt install"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
+alias remove="sudo apt remove"
 alias search="apt search"
