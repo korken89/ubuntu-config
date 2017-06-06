@@ -43,6 +43,8 @@ packages="\
     thunar \
     arandr \
     compton \
+    gimp \
+    inkscape \
     "
 i3wmpkgs="\
     i3 \

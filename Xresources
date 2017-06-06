@@ -10,11 +10,11 @@ Xcursor.size:                           0
 URxvt*font:                             xft:Inconsolata for Powerline:size=13
 URxvt.letterSpace:                      -1
 URxvt.depth:                            32
-URxvt.background:                       [62]#202020
+URxvt.background:                       [85]#202020
 URxvt*scrollBar:                        false
 URxvt*mouseWheelScrollPage:             false
 URxvt*cursorBlink:                      true
-URxvt*background:                       [62]#202020
+URxvt*background:                       [85]#202020
 URxvt*foreground:                       white
 URxvt*saveLines:                        5000
 
