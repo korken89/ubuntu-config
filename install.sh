@@ -41,6 +41,7 @@ packages="\
     adwaita-icon-theme-full \
     lxappearance \
     thunar \
+    arandr \
     "
 i3wmpkgs="\
     i3 \
