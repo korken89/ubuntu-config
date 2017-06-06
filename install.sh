@@ -15,7 +15,6 @@ packages="\
     libeigen3-dev \
     libnlopt-dev
     libcv-dev \
-    youtube-dl \
     texlive-full \
     latexmk \
     evince \
@@ -97,6 +96,12 @@ echo Installing i3 Window Manager: $i3wmpkgs
 sleep 1
 sudo apt install --yes $i3wmpkgs
 
+echo ""
+echo Installing youtube-viewer
+sleep 1
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install --yes youtube-viewer
 
 echo ""
 echo Installing neovim
@@ -113,6 +118,14 @@ sleep 1
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo apt update
 sudo apt install --yes gcc-arm-embedded openocd dfu-util
+
+echo ""
+echo Installing ROS
+sleep 1
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt update
+sudo apt install ros-kinetic-desktop-full python-catkin-tools ros-kinetic-default-cfg-fkie ros-kinetic-master-discovery-fkie ros-kinetic-master-sync-fkie ros-kinetic-multimaster-fkie ros-kinetic-multimaster-msgs-fkie ros-kinetic-node-manager-fkie
 
 # echo Installing Atom packages
 # sleep 1

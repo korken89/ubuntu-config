@@ -66,7 +66,7 @@ bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exe
 bindsym $mod+Shift+p --release exec "notify-send 'selection will be saved to clipboard'; scrot -se 'xclip -selection clipboard -t image/png < $f && rm $f'"
 
 # utilities
-bindsym $mod+m exec i3-sensible-terminal -e ~/.ymusic.sh
+bindsym $mod+m exec urxvt -e ~/.ymusic.sh
 
 # Lock screen
 bindsym $mod+Ctrl+l exec --no-startup-id pixellock
