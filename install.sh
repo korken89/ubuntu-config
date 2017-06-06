@@ -42,6 +42,7 @@ packages="\
     lxappearance \
     thunar \
     arandr \
+    compton \
     "
 i3wmpkgs="\
     i3 \
