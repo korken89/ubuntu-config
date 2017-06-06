@@ -48,22 +48,22 @@ i3wmpkgs="\
     "
 
 atompkgs="\
-    atom-gdb-debugger \
-    build\
-    build-make \
-    busy \
-    clang-format \
-    git-plus \
-    highlight-line \
-    linter \
-    linter-clang \
-    monokai \
-    vim-mode-plus \
-    you-complete-me \
-    tabs-to-spaces \
-    language-vhdl \
-    vhdl-entity-converter \
-    "
+atom-gdb-debugger \
+build\
+build-make \
+busy \
+clang-format \
+git-plus \
+highlight-line \
+linter \
+linter-clang \
+monokai \
+vim-mode-plus \
+you-complete-me \
+tabs-to-spaces \
+language-vhdl \
+vhdl-entity-converter \
+"
 
 #services="""
 #sshd.socket
@@ -135,6 +135,14 @@ sudo apt update
 sudo apt install --yes gcc-arm-embedded openocd dfu-util
 
 echo ""
+echo Installing Atom
+sleep 1
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt update
+sudo apt install --yes atom
+apm install $atompkgs
+
+echo ""
 echo Installing ROS
 sleep 1
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -144,7 +152,6 @@ sudo apt install ros-kinetic-desktop-full python-catkin-tools ros-kinetic-defaul
 
 # echo Installing Atom packages
 # sleep 1
-# apm install $atompkgs
 
 # enable some stuff
 # echo enabling: $services
