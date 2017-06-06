@@ -104,6 +104,15 @@ sleep 1
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install --yes neovim python-dev python-pip python3-dev python3-pip
+sudo pip2 install --upgrade neovim
+sudo pip3 install --upgrade neovim
+
+echo ""
+echo Installing ARM tools
+sleep 1
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt update
+sudo apt install --yes gcc-arm-embedded openocd dfu-util
 
 # echo Installing Atom packages
 # sleep 1
@@ -124,7 +133,8 @@ sleep 1
 sudo usermod -aG dialout $user
 
 # Fix ltu printer system
-# echo Fixing LTU printer...
+# echo ""
+# echo Fixing LTU printers...
 # sleep 1
 # sudo sh -c 'echo "ServerName IPP.LTU.SE" > /etc/cups/client.conf'
 
@@ -133,11 +143,6 @@ echo ""
 echo Fixing some configs...
 sleep 1
 
-if [ -f ~/.Xresources ]; then
-    echo ""
-    echo ".Xresources already exists, moved to .Xresources_old."
-    mv ~/.Xresources ~/.Xresources_old
-fi
 mkdir -p ~/.i3
 ln -sf "$(pwd)/i3_config" ~/.i3/config
 ln -sf "$(pwd)/i3-battery.py" ~/.i3/i3-battery.py
