@@ -153,16 +153,16 @@ ln -sf "$(pwd)/zshrc" ~/.zshrc
 ln -sf "$(pwd)/agnoster_btf.zsh-theme" ~/.oh-my-zsh/themes
 ln -sf "$(pwd)/Xresources" ~/.Xresources
 ln -sf "$(pwd)/latexmkrc" ~/.latexmkrc
-echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
-echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
 ln -sf "$(pwd)/ymusic.sh" ~/.ymusic.sh
 ln -sf "$(pwd)/atom-config.cson" ~/.atom/config.cson
 sudo ln -sf "$(pwd)/lock.sh" /usr/bin/pixellock
 sudo ln -sf "$(pwd)/i3exit" /usr/bin/i3exit
 ln -sf "$(pwd)/gdbinit" ~/.gdbinit
 sudo ln -sf "$(pwd)/20-intel.conf" /usr/share/X11/xorg.conf.d
+echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
+echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
 
-# Copying udec rules
+# Copying udev rules
 echo ""
 echo Copying udev rules...
 sleep 1
@@ -174,8 +174,6 @@ echo ""
 echo Fixing some nvim configs...
 sleep 1
 git clone https://github.com/korken89/nvim.git ~/.config/nvim
-sudo pip2 install --upgrade neovim
-sudo pip3 install --upgrade neovim
 nvim -c PlugInstall
 
 echo ""
