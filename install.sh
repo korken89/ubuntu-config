@@ -178,6 +178,29 @@ sudo usermod -aG dialout $user
 # sleep 1
 # sudo sh -c 'echo "ServerName IPP.LTU.SE" > /etc/cups/client.conf'
 
+# Copying udev rules
+echo ""
+echo Copying udev rules...
+sleep 1
+sudo cp ./udev_rules/* /etc/udev/rules.d/
+sudo udevadm control --reload
+
+# Fix vim settings
+echo ""
+echo Fixing some nvim configs...
+sleep 1
+git clone https://github.com/korken89/nvim.git ~/.config/nvim
+nvim -c PlugInstall
+
+echo ""
+echo Installing oh-my-zsh + extras
+sleep 1
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+sudo wget https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font -P /usr/lib/urxvt/perl
+mkdir -p ~/.fonts
+wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -P ~/fonts
+
 # Fix config files
 echo ""
 echo Fixing some configs...
@@ -203,27 +226,4 @@ ln -sf "$(pwd)/gdbinit" ~/.gdbinit
 sudo ln -sf "$(pwd)/20-intel.conf" /usr/share/X11/xorg.conf.d/20-intel.conf
 echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
 echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
-
-# Copying udev rules
-echo ""
-echo Copying udev rules...
-sleep 1
-sudo cp ./udev_rules/* /etc/udev/rules.d/
-sudo udevadm control --reload
-
-# Fix vim settings
-echo ""
-echo Fixing some nvim configs...
-sleep 1
-git clone https://github.com/korken89/nvim.git ~/.config/nvim
-nvim -c PlugInstall
-
-echo ""
-echo Installing oh-my-zsh + extras
-sleep 1
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-sudo wget https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font -P /usr/lib/urxvt/perl
-mkdir -p ~/.fonts
-wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -P ~/fonts
 
