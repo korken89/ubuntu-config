@@ -102,32 +102,38 @@ sleep 1
 sudo apt install --yes $i3wmpkgs
 
 echo ""
-echo Installing youtube-viewer
+echo Fixing repositories
 sleep 1
 sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D2C19886
+sudo add-apt-repository ppa:atareao/telegram
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo add-apt-repository ppa:webupd8team/atom
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
 sudo apt update
+
+echo ""
+echo Installing youtube-viewer
+sleep 1
 sudo apt install --yes youtube-viewer
 
 echo ""
 echo Installing Spotify
 sleep 1
-sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D2C19886
-sudo apt update
 sudo apt install spotify-client
 
 echo ""
 echo Installing Telegram
 sleep 1
-sudo add-apt-repository ppa:atareao/telegram
-sudo apt update
 sudo apt install telegram
 
 echo ""
 echo Installing neovim
 sleep 1
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt update
 sudo apt install --yes neovim python-dev python-pip python3-dev python3-pip
 sudo pip2 install --upgrade neovim
 sudo pip3 install --upgrade neovim
@@ -135,25 +141,18 @@ sudo pip3 install --upgrade neovim
 echo ""
 echo Installing ARM tools
 sleep 1
-sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
-sudo apt update
 sudo apt install --yes gcc-arm-embedded openocd dfu-util
 
 echo ""
 echo Installing Atom
 sleep 1
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt update
 sudo apt install --yes atom
 apm install $atompkgs
 
 echo ""
 echo Installing ROS
 sleep 1
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-sudo apt update
-sudo apt install ros-kinetic-desktop-full python-catkin-tools ros-kinetic-default-cfg-fkie ros-kinetic-master-discovery-fkie ros-kinetic-master-sync-fkie ros-kinetic-multimaster-fkie ros-kinetic-multimaster-msgs-fkie ros-kinetic-node-manager-fkie
+sudo apt install --yes ros-kinetic-desktop-full python-catkin-tools ros-kinetic-default-cfg-fkie ros-kinetic-master-discovery-fkie ros-kinetic-master-sync-fkie ros-kinetic-multimaster-fkie ros-kinetic-multimaster-msgs-fkie ros-kinetic-node-manager-fkie
 
 # echo Installing Atom packages
 # sleep 1
