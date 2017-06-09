@@ -4,6 +4,7 @@ packages="\
     git \
     cmake \
     libclang-3.8-dev \
+    clang-format \
     minicom \
     wget \
     curl \
@@ -45,6 +46,7 @@ packages="\
     compton \
     gimp \
     inkscape \
+    chromium-browser \
     "
 i3wmpkgs="\
     i3 \
@@ -111,8 +113,10 @@ sudo add-apt-repository ppa:atareao/telegram
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo add-apt-repository ppa:webupd8team/atom
+sudo add-apt-repository --yes ppa:js-reynaud/ppa-kicad
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
 
 sudo apt update
 
@@ -148,6 +152,11 @@ echo Installing Atom
 sleep 1
 sudo apt install --yes atom
 apm install $atompkgs
+
+echo ""
+echo Installing KiCad
+sleep 1
+sudo apt install --yes kicad
 
 echo ""
 echo Installing ROS
@@ -198,7 +207,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 sudo wget https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font -P /usr/lib/urxvt/perl
 mkdir -p ~/.fonts
-wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -P ~/fonts
+wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -P ~/.fonts
 
 # Fix config files
 echo ""
