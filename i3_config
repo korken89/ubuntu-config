@@ -46,6 +46,7 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 focus_follows_mouse no
 
 # Pulse Audio controls
+bindsym $mod+Ctrl+m exec --no-startup-id pavucontrol
 
 # Lenovo Thinkpad Yoga
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 1 +5% #increase sound volume
