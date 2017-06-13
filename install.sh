@@ -5,6 +5,7 @@ packages="\
     cmake \
     libclang-3.8-dev \
     clang-format \
+    clang \
     minicom \
     wget \
     curl \
