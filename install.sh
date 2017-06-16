@@ -50,6 +50,7 @@ packages="\
     chromium-browser \
     exfat-fuse \
     exfat-utils \
+    xournal \
     "
 i3wmpkgs="\
     i3 \
