@@ -48,6 +48,8 @@ packages="\
     gimp \
     inkscape \
     chromium-browser \
+    exfat-fuse \
+    exfat-utils \
     "
 i3wmpkgs="\
     i3 \
