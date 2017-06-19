@@ -51,6 +51,7 @@ packages="\
     exfat-fuse \
     exfat-utils \
     xournal \
+    nmap \
     "
 i3wmpkgs="\
     i3 \
