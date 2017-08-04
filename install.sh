@@ -166,7 +166,7 @@ sudo apt install --yes kicad
 echo ""
 echo Installing ROS
 sleep 1
-sudo apt install --yes ros-kinetic-desktop-full python-catkin-tools ros-kinetic-default-cfg-fkie ros-kinetic-master-discovery-fkie ros-kinetic-master-sync-fkie ros-kinetic-multimaster-fkie ros-kinetic-multimaster-msgs-fkie ros-kinetic-node-manager-fkie
+sudo apt install --yes ros-kinetic-desktop-full python-wstool python-catkin-tools ros-kinetic-default-cfg-fkie ros-kinetic-master-discovery-fkie ros-kinetic-master-sync-fkie ros-kinetic-multimaster-fkie ros-kinetic-multimaster-msgs-fkie ros-kinetic-node-manager-fkie
 
 # echo Installing Atom packages
 # sleep 1
