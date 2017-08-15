@@ -3,6 +3,6 @@ Version=1.0
 Type=Application
 Terminal=false
 Name[en_US]=Vivado
-Exec=sh -c "mkdir -p ~/.Xilinx && cd ~/.Xilinx && source /opt/Xilinx/Vivado/2017.2/settings64.sh && vivado"
+Exec=zsh -c "mkdir -p ~/.Xilinx && cd ~/.Xilinx && source /opt/Xilinx/Vivado/2017.2/settings64.sh && vivado"
 Name=Vivado
 StartupNotify=true
