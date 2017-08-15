@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name[en_US]=Xilinx SDK
+Exec=sh -c "mkdir -p ~/.Xilinx && cd ~/.Xilinx && source /opt/Xilinx/Vivado/2017.2/settings64.sh && xsdk"
+Name=Xilinx SDK
+StartupNotify=true
