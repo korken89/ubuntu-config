@@ -48,6 +48,10 @@ focus_follows_mouse no
 # Pulse Audio controls
 bindsym $mod+Ctrl+m exec --no-startup-id pavucontrol
 
+# Scratchpad
+bindsym $mod+t scratchpad show
+bindsym $mod+Shift+t move scratchpad
+
 # Lenovo Thinkpad Yoga
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 1 +5% #increase sound volume
 # bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 1 -5% #decrease sound volume

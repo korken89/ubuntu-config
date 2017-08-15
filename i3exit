@@ -8,10 +8,10 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        systemctl suspend
+        systemctl suspend && pixellock
         ;;
     hibernate)
-        systemctl hibernate
+        systemctl hibernate && pixellock
         ;;
     reboot)
         systemctl reboot
