@@ -1,0 +1,1 @@
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", ATTRS{product}=="KVision", RUN+="/bin/sh -c 'echo $kernel > /sys/bus/usb/drivers/ftdi_sio/unbind'"
