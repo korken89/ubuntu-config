@@ -11,7 +11,7 @@ packages="\
     minicom \
     wget \
     curl \
-    ack-grep \
+    silversearcher-ag \
     rxvt-unicode-256color \
     libboost-all-dev \
     libgtest-dev \
