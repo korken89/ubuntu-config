@@ -5,3 +5,5 @@
     rebase = true
 [alias]
     tree = log --oneline --decorate --all --graph
+[push]
+	default = simple
