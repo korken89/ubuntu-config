@@ -235,6 +235,7 @@ ln -sf "$(pwd)/dunstrc" ~/.config/dunst/dunstrc
 ln -sf "$(pwd)/latexmkrc" ~/.latexmkrc
 ln -sf "$(pwd)/ymusic.sh" ~/.ymusic.sh
 ln -sf "$(pwd)/atom-config.cson" ~/.atom/config.cson
+ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 sudo ln -sf "$(pwd)/lock.sh" /usr/bin/pixellock
 sudo ln -sf "$(pwd)/i3exit" /usr/bin/i3exit
 ln -sf "$(pwd)/gdbinit" ~/.gdbinit
