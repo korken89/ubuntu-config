@@ -123,9 +123,15 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository --yes ppa:js-reynaud/ppa-kicad
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-add-repository ppa:fish-shell/release-2
 
 
 sudo apt update
+
+echo ""
+echo Installing Friendly Interactive Shell (fish)
+sleep 1
+sudo apt install --yes fish
 
 echo ""
 echo Installing youtube-viewer
@@ -208,11 +214,15 @@ git clone https://github.com/korken89/nvim.git ~/.config/nvim
 nvim -c PlugInstall
 
 echo ""
-echo Installing oh-my-zsh + extras
+echo Installing oh-my-zsh + extras for zsh
 sleep 1
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 sudo wget https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font -P /usr/lib/urxvt/perl
+
+echo ""
+echo Installing fonts
+sleep 1
 mkdir -p ~/.fonts
 wget https://github.com/powerline/fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -P ~/.fonts
 
@@ -223,12 +233,14 @@ sleep 1
 
 mkdir -p ~/.i3
 mkdir -p ~/.config/dunst
+mkdir -p ~/.config/fish
 ln -sf "$(pwd)/i3_config" ~/.i3/config
 ln -sf "$(pwd)/i3-battery.py" ~/.i3/i3-battery.py
 ln -sf "$(pwd)/i3blocks.conf" ~/.i3/i3blocks.conf
 ln -sf "$(pwd)/rc_additions" ~/.rc_additions
 ln -sf "$(pwd)/aliases" ~/.aliases
 ln -sf "$(pwd)/zshrc" ~/.zshrc
+ln -sf "$(pwd)/config.fish" ~/.config/fish/config.fish
 ln -sf "$(pwd)/agnoster_btf.zsh-theme" ~/.oh-my-zsh/themes
 ln -sf "$(pwd)/Xresources" ~/.Xresources
 ln -sf "$(pwd)/dunstrc" ~/.config/dunst/dunstrc
@@ -243,3 +255,8 @@ sudo ln -sf "$(pwd)/20-intel.conf" /usr/share/X11/xorg.conf.d/20-intel.conf
 echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
 echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
 
+echo ""
+echo Installing oh-my-fish + bobthefish
+sleep 1
+curl -L https://get.oh-my.fish | fish
+fish -c omf install bobthefish
