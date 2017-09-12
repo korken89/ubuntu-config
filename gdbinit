@@ -11,7 +11,13 @@ import re
 import struct
 import termios
 import traceback
+import sys
 
+# Register Eigen printer
+# sys.path.insert(0, '/home/emifre/Git/eigen/debug/gdb')
+# from printers import register_eigen_printers
+# register_eigen_printers (None)
+#end
 # Common attributes ------------------------------------------------------------
 
 class R():
@@ -1385,6 +1391,8 @@ class Expressions(Dashboard.Module):
         }
 
 # XXX traceback line numbers in this Python block must be increased by 1
+
+
 end
 
 # Better GDB defaults ----------------------------------------------------------
@@ -1400,7 +1408,6 @@ set python print-stack full
 # Start ------------------------------------------------------------------------
 
 python Dashboard.start()
-
 # ------------------------------------------------------------------------------
 # Copyright (c) 2015-2017 Andrea Cardaci <cyrus.and@gmail.com>
 #
