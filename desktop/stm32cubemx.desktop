@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=STM32 CubeMX
+Comment=STM32 CubeMX
+Exec=java -jar /opt/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX
+Categories=Office
+Terminal=false

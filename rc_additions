@@ -1,8 +1,4 @@
-alias rtlatex="latexmk -pvc -pdf"
-alias make="make -j"
-alias sr="source devel/setup.zsh"
-alias v=vi
-alias pullr="find . -name \".git\" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull"
+alias scan="echo Scaning network... && nmap -sn $(echo $(hostname -I) | cut -d"." -f1-3).1/24 1>/dev/null && arp -a | grep -v incomplete"
 
 # ROS
 export ROS_MASTER_URI=http://localhost:11311

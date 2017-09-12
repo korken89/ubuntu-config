@@ -1,0 +1,9 @@
+[user]
+    email = emil.fresk@gmail.com
+    name = Emil Fresk
+[pull]
+    rebase = true
+[alias]
+    tree = log --oneline --decorate --all --graph
+[push]
+	default = simple
