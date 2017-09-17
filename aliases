@@ -5,7 +5,6 @@ alias remove="sudo apt remove"
 alias search="apt search"
 alias ack="ag -Q"
 alias rtlatex="latexmk -pvc -pdf"
-alias make="make -j4"
 alias sr="source devel/setup.zsh"
 alias v=vi
 alias pullr="bash -c \"find . -name \".git\" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull\""
