@@ -54,6 +54,7 @@ packages="\
     exfat-utils \
     xournal \
     nmap \
+    xss-lock \
     "
 i3wmpkgs="\
     i3 \

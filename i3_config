@@ -207,6 +207,7 @@ bar {
 
 # Autostart applications
 exec --no-startup-id xautolock -time 10 -locker pixellock
+exec --no-startup-id xss-lock -- pixellock # Lock on suspend
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox start
