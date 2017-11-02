@@ -215,6 +215,7 @@ exec --no-startup-id compton -f -D 4 -b
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always tlp start
 exec_always --no-startup-id nitrogen --restore
+exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 
 # Disable window titlebars entirely
 for_window [class="^.*"] border pixel 2
