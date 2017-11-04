@@ -49,7 +49,6 @@ packages="\
     compton \
     gimp \
     inkscape \
-    chromium-browser \
     exfat-fuse \
     exfat-utils \
     xournal \
@@ -126,6 +125,10 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo apt-add-repository ppa:fish-shell/release-2
 
+# Google Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
 
 sudo apt update
 
@@ -133,6 +136,11 @@ echo ""
 echo Installing Friendly Interactive Shell (fish)
 sleep 1
 sudo apt install --yes fish
+
+echo ""
+echo Installing Google Chrome
+sleep 1
+sudo apt install --yes google-chrome-stable
 
 echo ""
 echo Installing youtube-viewer
