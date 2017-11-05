@@ -63,8 +63,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute s
 # bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec ~/.backlight.sh inc # increase screen brightness
+bindsym XF86MonBrightnessDown exec ~/.backlight.sh dec # decrease screen brightness
 
 bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"

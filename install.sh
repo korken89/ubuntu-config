@@ -260,6 +260,7 @@ ln -sf "$(pwd)/gitconfig" ~/.gitconfig
 sudo ln -sf "$(pwd)/lock.sh" /usr/bin/pixellock
 sudo ln -sf "$(pwd)/i3exit" /usr/bin/i3exit
 ln -sf "$(pwd)/gdbinit" ~/.gdbinit
+ln -sf "$(pwd)/backlight.sh" ~/.backlight.sh
 sudo ln -sf "$(pwd)/20-intel.conf" /usr/share/X11/xorg.conf.d/20-intel.conf
 echo "[[ -f '$(pwd)/rc_additions' ]] && source $(pwd)/rc_additions " >> ~/.bashrc
 echo "[[ -f '$(pwd)/aliases' ]] && source $(pwd)/aliases " >> ~/.bashrc
