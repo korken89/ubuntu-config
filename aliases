@@ -9,3 +9,4 @@ alias sr="source devel/setup.zsh"
 alias v=vi
 alias pullr="bash -c \"find . -name \".git\" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull\""
 alias gdb-bmp='arm-none-eabi-gdb -ex "target extended-remote /dev/ttyBmpGDB" -ex "monitor connect_srst enable" -ex "monitor swdp_scan" -ex "attach 1"'
+alias nwr="sudo service network-manager restart"
