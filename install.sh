@@ -246,6 +246,7 @@ mkdir -p ~/.config/fish
 ln -sf "$(pwd)/i3_config" ~/.i3/config
 ln -sf "$(pwd)/i3-battery.py" ~/.i3/i3-battery.py
 ln -sf "$(pwd)/i3blocks.conf" ~/.i3/i3blocks.conf
+sudo ln -sf "$(pwd)/getlayout" /usr/share/i3blocks/getlayout
 ln -sf "$(pwd)/rc_additions" ~/.rc_additions
 ln -sf "$(pwd)/aliases" ~/.aliases
 ln -sf "$(pwd)/zshrc" ~/.zshrc

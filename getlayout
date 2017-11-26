@@ -1,0 +1,3 @@
+#!/bin/bash
+LG=$(setxkbmap -query | awk '/layout/{print toupper($2)}')
+echo " $LG"
