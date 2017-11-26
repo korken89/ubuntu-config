@@ -56,7 +56,6 @@ packages="\
     xss-lock \
     "
 i3wmpkgs="\
-    i3 \
     i3blocks \
     j4-dmenu-desktop
     "
@@ -108,6 +107,7 @@ sudo apt install --yes $packages
 echo ""
 echo Installing i3 Window Manager: $i3wmpkgs
 sleep 1
+sudo sh "$(pwd)/i3-gaps-install.sh"
 sudo apt install --yes $i3wmpkgs
 
 echo ""
