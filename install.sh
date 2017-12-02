@@ -56,6 +56,7 @@ packages="\
     xss-lock \
     "
 i3wmpkgs="\
+    i3 \
     i3blocks \
     j4-dmenu-desktop
     "
@@ -107,15 +108,15 @@ sudo apt install --yes $packages
 echo ""
 echo Installing i3 Window Manager: $i3wmpkgs
 sleep 1
-sudo sh "$(pwd)/i3-gaps-install.sh"
 sudo apt install --yes $i3wmpkgs
+sh "$(pwd)/i3-gaps-install.sh"
 
 echo ""
 echo Fixing repositories
 sleep 1
 sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D2C19886
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EFDC8610341D9410
 sudo add-apt-repository ppa:atareao/telegram
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
@@ -133,7 +134,7 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt update
 
 echo ""
-echo Installing Friendly Interactive Shell (fish)
+echo "Installing Friendly Interactive Shell (fish)"
 sleep 1
 sudo apt install --yes fish
 
@@ -175,10 +176,10 @@ sleep 1
 sudo apt install --yes atom
 apm install $atompkgs
 
-echo ""
-echo Installing KiCad
-sleep 1
-sudo apt install --yes kicad
+# echo ""
+# echo Installing KiCad
+# sleep 1
+# sudo apt install --yes kicad
 
 echo ""
 echo Installing ROS
