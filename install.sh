@@ -3,11 +3,11 @@
 packages="\
     git \
     cmake \
-    clang-4.0 \
-    libclang-4.0-dev \
-    clang-format-4.0 \
-    clang-tidy-4.0 \
-    lldb-4.0 \
+    clang-5.0 \
+    libclang-5.0-dev \
+    clang-format-5.0 \
+    clang-tidy-5.0 \
+    lldb-5.0 \
     minicom \
     wget \
     curl \
