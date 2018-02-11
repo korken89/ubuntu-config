@@ -5,6 +5,13 @@
     rebase = true
 [alias]
     tree = log --oneline --decorate --all --graph
+	co = checkout
+	br = branch
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	ci = commit
 [push]
 	default = simple
 [core]
