@@ -217,7 +217,7 @@ exec_always tlp start
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # Switch keyboard layout
-exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle"
+exec_always "setxkbmap -layout \"se(nodeadkeys),us\" -option grp:win_space_toggle -option ctrl:nocaps"
 
 
 # Disable window titlebars entirely
