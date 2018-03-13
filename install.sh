@@ -115,16 +115,17 @@ echo ""
 echo Fixing repositories
 sleep 1
 sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EFDC8610341D9410
 sudo add-apt-repository ppa:atareao/telegram
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo add-apt-repository ppa:webupd8team/atom
-sudo add-apt-repository --yes ppa:js-reynaud/ppa-kicad
+sudo add-apt-repository ppa:js-reynaud/kicad-5
+sudo apt-add-repository ppa:fish-shell/release-2
+
+sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free"
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EFDC8610341D9410
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-sudo apt-add-repository ppa:fish-shell/release-2
 
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
