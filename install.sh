@@ -197,6 +197,7 @@ rustup install stable
 rustup install beta
 rustup install nightly
 rustup default nightly
+rustup target add thumbv6m-none-eabi
 rustup target add thumbv7m-none-eabi
 mkdir -p ~/.config/fish/completions
 rustup completions fish > ~/.config/fish/completions/rustup.fish
