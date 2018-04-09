@@ -3,6 +3,7 @@
 packages="\
     git \
     cmake \
+    ninja-build \
     clang-5.0 \
     libclang-5.0-dev \
     clang-format-5.0 \
