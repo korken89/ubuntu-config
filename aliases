@@ -1,6 +1,6 @@
 alias install="sudo apt install"
 alias update="sudo apt update"
-alias upgrade="sudo apt update; sudo apt upgrade; rustup update"
+alias upgrade="sudo apt update; sudo apt upgrade --yes; rustup update"
 alias remove="sudo apt remove"
 alias search="apt search"
 alias ack="ag -Q"
