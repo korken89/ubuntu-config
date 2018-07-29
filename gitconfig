@@ -1,10 +1,10 @@
 [user]
-    email = emil.fresk@gmail.com
-    name = Emil Fresk
+	email = emil.fresk@gmail.com
+	name = Emil Fresk
 [pull]
-    rebase = true
+	rebase = true
 [alias]
-    tree = log --oneline --decorate --all --graph
+	tree = log --oneline --decorate --all --graph
 	co = checkout
 	br = branch
 	st = status
@@ -15,4 +15,6 @@
 [push]
 	default = simple
 [core]
-  editor = vim
+	editor = vim
+[merge]
+	ff = false
