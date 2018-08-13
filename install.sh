@@ -194,13 +194,31 @@ sleep 1
 curl https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env
 rustup install stable
+rustup default stable
+rustup target add thumbv6m-none-eabi
+rustup target add thumbv7m-none-eabi
+rustup target add thumbv7em-none-eabi
+rustup target add thumbv7em-none-eabihf
+
 rustup install beta
+rustup default beta
+rustup target add thumbv6m-none-eabi
+rustup target add thumbv7m-none-eabi
+rustup target add thumbv7em-none-eabi
+rustup target add thumbv7em-none-eabihf
+
 rustup install nightly
 rustup default nightly
 rustup target add thumbv6m-none-eabi
 rustup target add thumbv7m-none-eabi
 rustup target add thumbv7em-none-eabi
 rustup target add thumbv7em-none-eabihf
+rustup component add rustfmt-preview
+rustup component add clippy-preview
+rustup component add llvm-tools-preview
+cargo install cargo-binutils
+cargo install ripgrep
+
 mkdir -p ~/.config/fish/completions
 rustup completions fish > ~/.config/fish/completions/rustup.fish
 
