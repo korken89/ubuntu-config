@@ -12,7 +12,7 @@
     last = log -1 HEAD
     visual = !gitk
     ci = commit
-	clone = clone --recursive
+	cloner = clone --recursive
 [push]
     default = simple
 [core]
