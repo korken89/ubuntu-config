@@ -1,20 +1,21 @@
 [user]
-	email = emil.fresk@gmail.com
-	name = Emil Fresk
+    email = emil.fresk@gmail.com
+    name = Emil Fresk
 [pull]
-	rebase = true
+    rebase = true
 [alias]
-	tree = log --oneline --decorate --all --graph
-	co = checkout
-	br = branch
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
-	ci = commit
+    tree = log --oneline --decorate --all --graph
+    co = checkout
+    br = branch
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk
+    ci = commit
+	clone = clone --recursive
 [push]
-	default = simple
+    default = simple
 [core]
-	editor = vim
+    editor = nvim
 [merge]
 	ff = false
