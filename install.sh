@@ -1,60 +1,61 @@
 #!/bin/bash
 
 packages="\
-    git \
-    cmake \
-    ninja-build \
+    adwaita-icon-theme-full \
+    arandr \
+    blueman \
     clang-5.0 \
-    libclang-5.0-dev \
     clang-format-5.0 \
     clang-tidy-5.0 \
-    lldb-5.0 \
-    minicom \
-    wget \
-    curl \
-    silversearcher-ag \
-    rxvt-unicode-256color \
-    libboost-all-dev \
-    libgtest-dev \
-    libgoogle-glog-dev \
-    libeigen3-dev \
-    libnlopt-dev
-    libcv-dev \
-    texlive-full \
-    latexmk \
-    evince \
-    nautilus-dropbox \
-    xclip \
-    mercurial \
-    okular \
-    qt5-default \
-    qt5-qmake \
-    libqt5serialport5-dev
-    qtcreator \
-    fonts-powerline \
-    fonts-font-awesome \
-    fonts-inconsolata \
-    zsh \
-    tlp \
-    xautolock \
-    blueman \
-    nitrogen \
-    pavucontrol \
-    xbacklight \
-    scrot \
-    gnome-themes-standard \
-    adwaita-icon-theme-full \
-    lxappearance \
-    thunar \
-    arandr \
+    cmake \
     compton \
-    gimp \
-    inkscape \
+    curl \
+    evince \
     exfat-fuse \
     exfat-utils \
-    xournal \
+    fonts-font-awesome \
+    fonts-inconsolata \
+    fonts-powerline \
+    gimp \
+    git \
+    gnome-themes-standard \
+    inkscape \
+    latexmk \
+    libboost-all-dev \
+    libclang-5.0-dev \
+    libcv-dev \
+    libeigen3-dev \
+    libgoogle-glog-dev \
+    libgtest-dev \
+    libnlopt-dev
+    libqt5serialport5-dev
+    lldb-5.0 \
+    lua5.1-dev \
+    lxappearance \
+    mercurial \
+    minicom \
+    nautilus-dropbox \
+    ninja-build \
+    nitrogen \
     nmap \
+    okular \
+    pavucontrol \
+    qt5-default \
+    qt5-qmake \
+    qtcreator \
+    rxvt-unicode-256color \
+    scrot \
+    silversearcher-ag \
+    texlive-full \
+    thunar \
+    tlp \
+    wget \
+    xautolock \
+    xbacklight \
+    xclip \
+    xournal \
     xss-lock \
+    zsh \
     "
 i3wmpkgs="\
     i3 \
@@ -62,29 +63,29 @@ i3wmpkgs="\
     j4-dmenu-desktop
     "
 
-atompkgs="\
-atom-gdb-debugger \
-build \
-build-make \
-busy \
-clang-format \
-git-plus \
-highlight-line \
-linter \
-linter-clang \
-monokai \
-vim-mode-plus \
-you-complete-me \
-tabs-to-spaces \
-language-vhdl \
-vhdl-entity-converter \
-"
+# atompkgs="\
+# atom-gdb-debugger \
+# build \
+# build-make \
+# busy \
+# clang-format \
+# git-plus \
+# highlight-line \
+# language-vhdl \
+# linter \
+# linter-clang \
+# monokai \
+# tabs-to-spaces \
+# vhdl-entity-converter \
+# vim-mode-plus \
+# you-complete-me \
+# "
 
-#services="""
-#sshd.socket
-#libvirtd
-#virtlogd.socket
-#"""
+# services="""
+# sshd.socket
+# libvirtd
+# virtlogd.socket
+# """
 
 removeables="\
     modemmanager \
@@ -164,8 +165,8 @@ echo ""
 echo Installing neovim
 sleep 1
 sudo apt install --yes neovim python-dev python-pip python3-dev python3-pip
-sudo pip2 install --upgrade neovim
-sudo pip3 install --upgrade neovim
+sudo pip2 install --upgrade neovim pynvim
+sudo pip3 install --upgrade neovim pynvim
 
 echo ""
 echo Installing ARM tools
@@ -195,29 +196,23 @@ curl https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env
 rustup install stable
 rustup default stable
-rustup target add thumbv6m-none-eabi
-rustup target add thumbv7m-none-eabi
-rustup target add thumbv7em-none-eabi
-rustup target add thumbv7em-none-eabihf
+rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf
 
 rustup install beta
 rustup default beta
-rustup target add thumbv6m-none-eabi
-rustup target add thumbv7m-none-eabi
-rustup target add thumbv7em-none-eabi
-rustup target add thumbv7em-none-eabihf
+rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf
 
 rustup install nightly
 rustup default nightly
-rustup target add thumbv6m-none-eabi
-rustup target add thumbv7m-none-eabi
-rustup target add thumbv7em-none-eabi
-rustup target add thumbv7em-none-eabihf
+rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf
+
 rustup component add rustfmt-preview
 rustup component add clippy-preview
 rustup component add llvm-tools-preview
+rustup component add rls-preview rust-analysis rust-src
 cargo install cargo-binutils
 cargo install ripgrep
+cargo install amp
 
 mkdir -p ~/.config/fish/completions
 rustup completions fish > ~/.config/fish/completions/rustup.fish
@@ -236,7 +231,6 @@ user=$(whoami)
 echo ""
 echo Setting groups for user: $user
 sleep 1
-# set some groups for manjaro and arch
 sudo usermod -aG dialout $user
 
 # Fix ltu printer system
