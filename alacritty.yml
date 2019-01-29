@@ -77,22 +77,23 @@ scrolling:
 tabspaces: 8
 
 # Font configuration (changes require restart)
+# Download here: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Inconsolata
 font:
   # Normal (roman) font face
   normal:
-    family: "Inconsolata Nerd Font"
+    family: "Inconsolata Nerd Font Mono"
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
   bold:
-    family: "Inconsolata Nerd Font"
+    family: "Inconsolata Nerd Font Mono"
     # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
   italic:
-    family: "Inconsolata Nerd Font"
+    family: "Inconsolata Nerd Font Mono"
     # The `style` can be specified to pick a specific face.
     style: Italic
 
