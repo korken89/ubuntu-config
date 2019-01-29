@@ -80,21 +80,21 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: "Inconsolata for Powerline"
+    family: "Inconsolata Nerd Font"
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
-    family: "Inconsolata for Powerline"
+    family: "Inconsolata Nerd Font"
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   italic:
-    family: "Inconsolata for Powerline"
+    family: "Inconsolata Nerd Font"
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Normal (roman) font face
   #normal:
@@ -179,27 +179,49 @@ colors:
     background: '0xeeeeee'
     foreground: '0x4d4d4c'
 
+# URXVT colors
   # Normal colors
   normal:
-    black:   '0x0b141a'
-    red:     '0xff4053'
-    green:   '0x11ab00'
-    yellow:  '0xbf8c00'
-    blue:    '0x0099ff'
-    magenta: '0x9854ff'
-    cyan:    '0x00a5ab'
-    white:   '0xffffff'
+    black:   '0xededed'
+    red:     '0xd7005f'
+    green:   '0x718c00'
+    yellow:  '0xd75f00'
+    blue:    '0x4271ae'
+    magenta: '0x8959a8'
+    cyan:    '0x3e999f'
+    white:   '0x4d4d4d'
 
   # Bright colors
   bright:
-    black:   '0x0b141a'
-    red:     '0xff4053'
-    green:   '0x11ab00'
-    yellow:  '0xbf8c00'
-    blue:    '0x0099ff'
-    magenta: '0x9854ff'
-    cyan:    '0x00a5ab'
-    white:   '0xffffff'
+    black:   '0x969696'
+    red:     '0xd7005f'
+    green:   '0x718c00'
+    yellow:  '0xd75f00'
+    blue:    '0x4271ae'
+    magenta: '0x8959a8'
+    cyan:    '0x3e999f'
+    white:   '0xf5f5f5'
+
+#  normal:
+#    black:   '0x0b141a'
+#    red:     '0xff4053'
+#    green:   '0x11ab00'
+#    yellow:  '0xbf8c00'
+#    blue:    '0x0099ff'
+#    magenta: '0x9854ff'
+#    cyan:    '0x00a5ab'
+#    white:   '0xffffff'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x0b141a'
+#    red:     '0xff4053'
+#    green:   '0x11ab00'
+#    yellow:  '0xbf8c00'
+#    blue:    '0x0099ff'
+#    magenta: '0x9854ff'
+#    cyan:    '0x00a5ab'
+#    white:   '0xffffff'
 
 # Colors (Tomorrow Night Bright)
 # colors:
