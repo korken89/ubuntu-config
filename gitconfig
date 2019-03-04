@@ -13,6 +13,7 @@
     visual = !gitk
     ci = commit
 	cloner = clone --recursive
+	history = log -p --
 [push]
     default = simple
 [core]
