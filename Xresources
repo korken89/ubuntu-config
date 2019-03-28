@@ -13,8 +13,8 @@ URxvt.depth:                            32
 URxvt*scrollBar:                        false
 URxvt*mouseWheelScrollPage:             false
 URxvt*cursorBlink:                      true
-#URxvt*background:                       [85]#202020
-#URxvt*foreground:                       white
+! URxvt*background:                       [85]#202020
+! URxvt*foreground:                       white
 URxvt*saveLines:                        5000
 
 URxvt.foreground: #4D4D4C
