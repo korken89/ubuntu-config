@@ -1654,6 +1654,8 @@ set mem inaccessible-by-default off
 python Dashboard.start()
 dashboard -layout !assembly !threads expressions history memory source stack
 dashboard -style syntax_highlighting "manni"
+# Make line number red
+dashboard -style style_selected_1 '1;31'
 
 
 # ------------------------------------------------------------------------------
